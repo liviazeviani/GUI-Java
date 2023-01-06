@@ -1,2 +1,3 @@
 # GUI-Java
-A graphical user interface in Java
+
+Chat Program with framework Swing
