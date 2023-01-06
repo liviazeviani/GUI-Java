@@ -17,6 +17,7 @@ public class ChatUI {
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
                 chatText = new JTextArea();
+                chatText.setEditable(false);
                 scrollPane = new JScrollPane(chatText);
                 frame.add(scrollPane, BorderLayout.CENTER);
 
