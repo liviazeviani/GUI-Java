@@ -10,17 +10,23 @@ public class ChatUI {
     private  JTextField entryText;
 
     public ChatUI(String title){
-        frame = new JFrame(title);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                frame = new JFrame(title);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        chatText = new JTextArea();
-        scrollPane = new JScrollPane(chatText);
-        frame.add(scrollPane, BorderLayout.CENTER);
+                chatText = new JTextArea();
+                scrollPane = new JScrollPane(chatText);
+                frame.add(scrollPane, BorderLayout.CENTER);
 
-        entryText = new JTextField();
-        frame.add(entryText,BorderLayout.PAGE_END);
+                entryText = new JTextField();
+                frame.add(entryText,BorderLayout.PAGE_END);
 
-        frame.setBounds(20, 20, 300, 300);
-        frame.setVisible(true);
+                frame.setBounds(20, 20, 300, 300);
+                frame.setVisible(true);
+            }
+        });
+
     }
 }
